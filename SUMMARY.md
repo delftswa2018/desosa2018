@@ -21,3 +21,5 @@
 * [Vue.js](vuejs/chapter.md)
 * [Godot](godot/chapter.md)
 * [Three.js](threejs/chapter.md)
+
+* [Open source contributions](contributions/chapter.md)
