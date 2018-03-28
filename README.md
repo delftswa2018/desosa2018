@@ -91,13 +91,14 @@ We would like to thank:
 
 1. Arie van Deursen, Maurício Aniche, Joop Aué, Rogier Slag, Michael de Jong, Alex Nederlof, Eric Bouwers. [A Collaborative Approach to Teach Software Architecture][sigcse]. 48th ACM Technical Symposium on Computer Science Education (SIGCSE), 2017.
 2. Arie van Deursen, Alex Nederlof, and Eric Bouwers. Teaching Software Architecture: with GitHub! [avandeursen.com][teaching-swa], December 2013.
+3. Arie van Deursen, Maurício Aniche, Andy Zaidman, Valentine Mairet, Sander van der Oever (editors). Delft Students on Software Architecture: [DESOSA 2017], 2017.
 3. Arie van Deursen, Maurício Aniche, Joop Aué (editors). Delft Students on Software Architecture: [DESOSA 2016], 2016.
 4. Arie van Deursen and Rogier Slag (editors). Delft Students on Software Architecture: DESOSA 2015. [https://delftswa.github.io/][desosa2015], 2015.
 5. Amy Brown and Greg Wilson (editors). [The Architecture of Open Source Applications][aosa]. Volumes 1-2, 2012.
 6. Nick Rozanski and Eoin Woods. [Software Systems Architecture: Working with Stakeholders Using Viewpoints and Perspectives][rw]. Addison-Wesley, 2012, 2nd edition.
 
-
-[DESOSA 2016]: https://www.gitbook.com/book/delftswa/desosa2016/details
+[DESOSA 2017]: https://delftswa.gitbooks.io/desosa-2017/content/
+[DESOSA 2016]: https://delftswa.gitbooks.io/desosa2016/content/
 [sigcse]: https://pure.tudelft.nl/portal/en/publications/a-collaborative-approach-to-teaching-software-architecture(0c7f2aeb-f2d6-4c56-9ab7-5f47f73d133f).html
 [teaching-swa]: http://avandeursen.com/2013/12/30/teaching-software-architecture-with-github/
 [rw]: http://www.viewpoints-and-perspectives.info/
