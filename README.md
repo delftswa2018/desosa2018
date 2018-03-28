@@ -114,7 +114,7 @@ Owl on [Emojipedia Sample Image Collection](http://emojipedia.org/emojipedia/sam
 Feathers by [Franco Averta](http://www.flaticon.com/authors/franco-averta) at [Flaticon](http://flaticon.com).
 
 
-[![Creative Commons](img/cc-by.png)][cc-by]
+[![Creative Commons](images/cc-by.png)][cc-by]
 
 [cc-by]: http://creativecommons.org/licenses/by/4.0/
 [desosa]: https://www.gitbook.com/book/delftswa/desosa2018/details
