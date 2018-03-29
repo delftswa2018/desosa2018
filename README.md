@@ -89,7 +89,7 @@ We would like to thank:
 
 ## Previous DESOSA editions
 
-1. Arie van Deursen, Maurício Aniche, Andy Zaidman, Valentine Mairet, Sander van der Oever (editors). Delft Students on Software Architecture: [DESOSA 2017], 2017.
+1. Arie van Deursen, Maurício Aniche, Andy Zaidman, Valentine Mairet, Sander van den Oever (editors). Delft Students on Software Architecture: [DESOSA 2017], 2017.
 1. Arie van Deursen, Maurício Aniche, Joop Aué (editors). Delft Students on Software Architecture: [DESOSA 2016], 2016.
 1. Arie van Deursen and Rogier Slag (editors). Delft Students on Software Architecture: DESOSA 2015. [DESOSA 2015], 2015.
 
