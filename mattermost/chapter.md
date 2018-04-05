@@ -449,5 +449,4 @@ With people's growing awareness of privacy protection, Mattermost is surely goin
 <a name="cont12">[12]</a> "Contributors to mattermost/docs." Internet: https://github.com/mattermost/docs/graphs/contributors  
 <a name="staf13">[13]</a> "Staff Developers — Mattermost 4.8 documentation." Internet: https://docs.mattermost.com/process/developer.html  
 <a name="comm14">[14]</a> "Mattermost Community — Mattermost 4.8 documentation." Internet: https://docs.mattermost.com/process/community-overview.html  
-<a name="succ15">[15]</a> "Success Stories – Mattermost." Internet: https://about.mattermost.com/success-stories/  
-<a name="mend">[16]</a> Mendelow
+<a name="succ15">[15]</a> "Success Stories – Mattermost." Internet: https://about.mattermost.com/success-stories/ 
