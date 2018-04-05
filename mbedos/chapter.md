@@ -71,7 +71,7 @@ The grid listed below shows the power vs Interest of each stakeholder. ARM as th
 The development of Mbed OS is closely monitored by the competition.
 The communicators and users have moderate interest in the platform but have little influence. Suppliers however have a moderate to large power since if there would be any major changes or a stop of development this would directly effect the project. However, programming languages like C and compilers like GNU ARM Embedded are very unlikely to change drastically.
 
-![Power vs Interest grid](/figures/Power_Interest_grid.png)
+![Power vs Interest grid](figures/Power_Interest_grid.png)
 <br>*Figure 1. Stakeholder power vs interest grid*
 
 ## Context View
@@ -80,7 +80,7 @@ To create this large ecosystem, Mbed depends on a lot of different parties that 
 Below are some major interactions and dependencies listed and visualized. Not all the companies that provides software,hardware or services are listed since there are too many to be able to include.
 
 
-![](/figures/context_view_figure.png)
+![](figures/context_view_figure.png)
 <br>*Figure 2. Context View of Mbed with its environment*
 
 Following up on the figure, a more detailed description is discussed next.
@@ -120,7 +120,7 @@ In particular,  _6LOWPAN_ provides IPv6 functionality and _Thread_ provides func
 
 The categorized modules be found in the figure below.
 
-![](/figures/Architecture_modules.png)
+![](figures/Architecture_modules.png)
 <br>*Figure 3. Module overview of the most important components of the system.*
 
 ### Common Design Models
@@ -195,7 +195,7 @@ Case cases[] = {
 
 ### Codeline
 
-<img src="/figures/Top_level_hierachy.png" alt="Drawing" style="width: 200px;"/>
+<img src="figures/Top_level_hierachy.png" alt="Drawing" style="width: 200px;"/>
 
 *Figure 4. The top level directory structure of the code [[9]](#ref9)*
 
@@ -211,7 +211,7 @@ The hal (hardware abstraction layer) includes C interfaces that defines function
 
 The platform directory includes C++ classes that implements basic functionality that are commonly found on different boards and platforms.
 
-<img src="/figures/down_level_hierarchy.png" alt="Drawing" style="width: 500px;"/>
+<img src="figures/down_level_hierarchy.png" alt="Drawing" style="width: 500px;"/>
 
 *Figure 5. Directory structures of features,TESTS,tools,targets and rtos.*
 
@@ -249,7 +249,7 @@ With the large amount of supported targets and options, Mbed OS's build and depl
 
 Mbed OS is a RTOS thus requires a user program to tell it what to do in order to do anything. An example deployment scenario is shown below. It depicts an embedded product with an onboard microcontroller and some other hardware on the board for communication. It can communicate directly to other devices through Mbed by using simple peripherals or even by using the on-board ethernet hardware to connect to servers.
 
-![Example deployment scenario](/figures/example_environment.png)
+![Example deployment scenario](figures/example_environment.png)
 <br>*Figure 6. Example deployment scenario.*
 
 ### Hardware Targets
@@ -273,12 +273,12 @@ With the large number of supported microcontrollers, it is important to note tha
 
 The first version for ARM Mbed OS was generated on 14th of December in 2014 and it is called Alpha 1, however, only available to Mbed Partners. The second version was released to the public after 2 months called Alpha 2 but it was still heavily in development. Finally, version 3.0 was released officially on 15th of October in 2015. The Mbed OS Release Schedule can be seen in Figure 1, which was shown on [ARM TechCon 2014](http://www.armtechcon.com/this-is-whats-new-at-arm-techcon-2014).
 
-![](/figures/Road_map_for_mbed.png)
+![](figures/Road_map_for_mbed.png)
 <br>*Figure 7. The roadmap of Mbed OS before 2016.*
 
 On 5th of August in 2016, Mbed OS 5 with version 5.1 was released. This release has a lot of changes and enhancements so that Mbed OS is usable for many Internet of Things (IoT) use cases. Also, Mbed OS 2 (“Classic”) and Mbed OS 3 is merged together such that the ecosystem of Mbed OS 3, such as an RTOS and tooling, is now combined with the ecosystem of  Mbed OS 2. Lastly, there are new board included that support Mbed[[10]](#ref10). The process is shown in Figure 2.
 
-![](/figures/Combination_of_2_3.png)
+![](figures/Combination_of_2_3.png)
 <br>*Figure 8. Mbed OS 5 integrates the two codelines of Mbed 2.0 (“Classic”) and Mbed 3.0 (“Eventing OS”) into one unified platform.*
 
 
@@ -351,7 +351,7 @@ Overall, these keywords indicate there is technical debt that the original autho
 #### Software Analytics
 Below, several interesting analyzed expects are discussed.
 ##### Code Duplication
-![Image code duplication](/figures/code_duplication.png)  
+![Image code duplication](figures/code_duplication.png)  
 <br>*Figure 9. SonarQube code duplication results.*
 
 The operating system has a lot of hardware targets. To support each of these targets (efficiently) code duplication is almost unavoidable and is very common for this scenario. The analysis showed most duplication occurs in the C files to support all of the different hardware targets as expected.
@@ -359,7 +359,7 @@ The operating system has a lot of hardware targets. To support each of these tar
 ##### Cyclomatic Complexity
 Cyclomatic complexity is a metric to measure the complexity of a program. This metric measures the number of independent paths through the code. In the case of MBed, to support all those hardware targets a lot of independent paths exist. This is reflected in the results, Mbed has a very high cyclomatic complexity. The main complexity occurs in the target implementations.
 
-![Image code duplication](/figures/cyclomatic.png)  
+![Image code duplication](figures/cyclomatic.png)  
 <br>*Figure 10. SonarQube detected cyclomatic complexity.*
 
 ### Manual Analysis
@@ -407,10 +407,10 @@ For every release for Mbed OS, there are new features added into the new version
 
  Using the information given in GitHub release[[13]](#ref13), two figures have been created. Figure 11 shows the number of ports for upcoming targets. Figure 12 shows the number of fixes and changes that are contributed by contributors in GitHub.
 
-![](/figures/Ports_for_upcoming_targets.png)
+![](figures/Ports_for_upcoming_targets.png)
 <br>*Figure 11. The number of ports for upcoming targets from Mbed OS 5.6.0 to 5.7.6.*
 
-![](/figures/fixes_and_changes.png)
+![](figures/fixes_and_changes.png)
 <br>*Figure 12. The number of fixes and changes from Mbed OS 5.6.0 to 5.7.6*
 
 ## Conclusion
