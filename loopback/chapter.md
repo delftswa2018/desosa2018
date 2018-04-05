@@ -325,7 +325,7 @@ However, these integration tests are not run by `npm test`, therefor these are n
 We think these tests should be included in the normal testing procedure, since we could not think of a reason not to.
 
 ### Coverage timeline
-For coverage reporting LoopBack uses [Coveralls][^coveralls], on the Coveralls website you can find the report for [loopback-next][https://coveralls.io/github/strongloop/loopback-next]. 
+For coverage reporting LoopBack uses [Coveralls][^coveralls], on the Coveralls website you can find the report for [loopback-next](https://coveralls.io/github/strongloop/loopback-next). 
 In the report for the loopback-next repository you can see a bump about half a year ago, from the commit message for that particular bump you can see that the testing framework dependencies were updated.
 A dip somewhat further shows a commit where the support for nodejs6 was dropped.
 It seems that for LoopBack4 the coverage has always been quite good, thus there is no real need for improving the coverage by adding more tests.
