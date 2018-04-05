@@ -2,7 +2,7 @@
 
 ![Logo](images/logo.png)
 
-Mathias Meuleman, Bart van Oort, Menno Oudshoorn, Mark van de Ruit
+By Mathias Meuleman, Bart van Oort, Menno Oudshoorn, Mark van de Ruit
 
 _Delft University of Technology, 2018_
 
