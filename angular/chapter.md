@@ -100,7 +100,7 @@ Leading web browsers also have a minimal stake in frameworks like Angular. They 
 
 We identified the interest and power of actors described in the stakeholders analysis. The most powerful actor with the highest interest is Google, which uses Angular for many of its products and is maintaining the Angular core team. Competitors have high interest in Angular project as their popularity is correlated with Angular success or failure, however they do not exert any significant power over it. Since Angular is written in TypeScript, which in turn heavily relies on JavaScript, the language specifications also have some power over the project, but with little to no interest. While web browsers are the main environment where Angular is used, they could have some power over the framework; however because browser vendors mostly only implement language and environment standards and experiment with early versions, they are not actually powerful. Community Contributors do have power over the project as their contribution can introduce new features or change functionality - their input is usually taken into account, however there is no way they can force Angular to make significant changes without substantial support. Web developers have almost no power over the project, although they can suggest changes that best suit their needs - which can then be picked up by community contributors and merged by the Angular Core Team. The Core Team exerts the most influence over the project's course and make decisions on features that are developed by them and merged from community developers.
 
-![power-grid](D1/PowerGrid.png)
+![power-grid](misc/PowerGrid.png)
 
 
 ## Context View
@@ -113,7 +113,7 @@ Angular is a front-end web framework. As a result, its main objective is to help
 
 #### Context View Diagram
 
-![context-view](D1/ContextView.png)
+![context-view](misc/ContextView.png)
 
 Using the above context-view, from a high-level perspective, we can see that while the project itself is open-source, Google is the chief maintainer, and so we can see high reliance on Google tooling, especially for development. Other individual entities/groups are described individually below.
 
@@ -138,7 +138,7 @@ The development view for a system describes the architecture related to the soft
 
 Angular source code is organized in to several modules that encapsulate specific [functionality](https://angular.io/guide/architecture) of the project,  represented as npm packages which allow for easy installation by tools such as [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/lang/en/). These packages are usually referred to as `@angular/*` and are called "components" within Angular's documentation. Below, we present Angular's module organization diagram with their dependencies, which can be split into 3 groups following the [convention](https://angular.io/guide/architecture) introduced by the Angular team - Core, Development and Support modules.
 
-![Modules Diagram](D2/upgraded-modules-diagram.png)
+![Modules Diagram](misc/upgraded-modules-diagram.png)
 
 #### Core Modules
 
@@ -192,7 +192,7 @@ Support modules are used by the Angular project internally but are not actively 
 
 #### Common Patterns
 
-![Angular's Architecture](D2/arch.jpg)
+![Angular's Architecture](misc/arch.jpg)
 
 In the above diagram, we can see an overview of an Angular application's architecture. Modules define compilation context, and contain Templates which contain the view layout while the Components contain the business logic. Metadata, or state, is shared and Property and Event Binding are used to keep both these parts in sync. Services provide specific functionalities, and are provided to the application via the Dependency Injector. Directives provide view logic to the Templates.
 
