@@ -76,7 +76,7 @@ As stated in the first implementation of Spark [[9]], the system achieves the fo
 
 The environment in the Context view is defined as the external entities such as service providers, users, and competitors, as well as the interfaces to those entities. To better understand the system scope and analyze the external entities with which it interacts, we provide the context model of Spark as shown in Figure 3. Since we are only looking at Spark Core in this analysis, the additional libraries of the Spark project (Spark SQL, MLib, etc.) are considered external entities.
 
-![Figure 3. Context model of Apache Spark](images-spark/Context-Model_v2.png)
+![Figure 3. Context model of Spark Core](images-spark/Context-Model_v2.png)
 
 In the following we explain the context model in more detail:
 
@@ -98,7 +98,7 @@ A functional view describes the system’s runtime functional elements and their
 The functional elements and interactions that are identified are illustrated in Figure 4. 
 
 
-![Figure 4. Functional Model](images-spark/Functional_model.png)
+![Figure 4. Functional Model of Spark Core](images-spark/Functional_model.png)
 
 When a user application starts, a *Spark driver* creates a *SparkContext*, with the Java API or Scala API as the interface. In the case where Python is used, *PySpark* is launched as the driver. *SparkContext* is the entry point of all the functionalities provided by Spark Core. It creates a *DAG Scheduler* and a *Task Scheduler* when it starts. *Resilient Distributed Datasets* (*RDDs*) are created by user's code on the data that the user wants to process. When an action is taken upon an *RDD*, *sparkContext* submits jobs to the *DAG Scheduler*.
 
