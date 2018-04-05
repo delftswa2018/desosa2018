@@ -11,15 +11,15 @@ Electron is an open-source software framework that was initially developed by  [
 1. [What is Electron?](#introduction)
 2. [Stakeholder Analysis](#stakeholder)
 3. [Architecture](#archi)
-  3.1. [Views](#view)
-     3.1.1. [Context View](#view1)
-     3.1.2. [Development View](#view2)
-     3.1.3. [Deployment View](#deployment)
-  3.2. [Architectural Perspectives](#per)
-    3.2.1. [The Evolution Perspective and the related Technical Debt](#evo)
-    3.2.2. [Security Perspective](#security)
+   - 3.1 [Views](#view)
+     - 3.1.1. [Context View](#view1)
+     - 3.1.2. [Development View](#view2)
+     - 3.1.3. [Deployment View](#deployment)
+   - 3.2. [Architectural Perspectives](#per)
+     - 3.2.1. [The Evolution Perspective and the related Technical Debt](#evo)
+     - 3.2.2. [Security Perspective](#security)
 4. [Conclusions](#con)
-14. [References](#ref)
+5. [References](#ref)
 
 <a name="introduction"></a>
 ## 1. What is Electron?
