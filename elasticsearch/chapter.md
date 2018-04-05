@@ -1,7 +1,9 @@
 # Elasticsearch - The Heart of the Elastic Stack
 
 ![Logo](images/logo.png)
+
 Mathias Meuleman, Bart van Oort, Menno Oudshoorn, Mark van de Ruit
+
 _Delft University of Technology, 2018_
 
 Elasticsearch is a distributed, RESTful search and analytics engine. It lies at the heart of the Elastic Stack: a group of multiple applications developed and managed by the Elastic company. The Elastic Stack provides a way to reliably and securely take data from any source in any format, and search, analyze, and visualize it in real time.
