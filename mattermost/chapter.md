@@ -5,7 +5,7 @@
 
 # Abstract
 Mattermost is an open source, cloud-based and self-hosted Slack alternative. The company came to realize the limitations and restrictions of Slack when they adopted it as their messaging service in 2014. This is when they decided to build their own messaging software, Mattermost.
-In this chapter we analyse the software architecture of Mattermost by looking at the stakeholders, the context view, development view, deployment view, security perspective and technical debt as defined by Rozanksi and Woods [[1]](#book1). We find out that Mattermost has a well organized development process and is currently in the process of repaying technical debt by moving the web app to Redux.
+In this chapter we analyze the software architecture of Mattermost by looking at the stakeholders, the context view, development view, deployment view, security perspective and technical debt as defined by Rozanksi and Woods [[1]](#book1). We find out that Mattermost has a well-organized development process and is currently in the process of repaying technical debt by moving the web app to Redux.
 
 # Table of Contents
 
@@ -29,9 +29,9 @@ In this chapter we analyse the software architecture of Mattermost by looking at
 # <a name="intro">Introduction</a>
 The world of team collaboration tools and messaging services has long been dominated by Slack. It has been the dominant service ever since its start in 2014, but the service is set back by limitations due to its proprietary nature and it only available as a Software as a Service (SaaS). 
 
-Enter Mattermost, an open source self-hosted Slack alternative. The company behind Mattermost came to realize the limitations and restrictions of Slack when they adopted it as their messaging service in 2014. This is when they decided to build their own messaging software. Mattermost entered the market with the promise of being free from the shackles of privately owned Slack servers. The open source nature makes it accessible for the community to contribute and makes it transparent for clients and the general public.
+Enter Mattermost, an open source self-hosted Slack alternative. The company behind Mattermost came to realize the limitations and restrictions of Slack when they adopted it as their messaging service in 2014. This is when they decided to build their own messaging software. Mattermost entered the market with the promise of being free from the shackles of privately owned Slack servers. The open source nature makes it accessible for the community to contribute and makes it transparent for clients and the public.
 
-The open source nature of the project has given us the opportunity to analyse and contribute to this project. In this chapter we give our analysis of the Mattermost software by look at views and perspectives as defined by Rozanksi and Woods [[1]](#book1). We will focus on the webapp portion of Mattermost as this is the part we contributed for. We will look at the stakeholders involved, followed by a context view of all external entities. Next we look at the development view of the project, which looks at the development process and the architecture of the web app. We look into the technical debt of the project and how it has evolved throughout the development. The final sections takes a closer look at the deployment view and security perspective of the project. We conclude our analysis in the final section.
+The open source nature of the project has given us the opportunity to analyse and contribute to this project. In this chapter we give our analysis of the Mattermost software by look at views and perspectives as defined by Rozanksi and Woods [[1]](#book1). We will focus on the webapp portion of Mattermost as this is the part we contributed for. We will look at the stakeholders involved, followed by a context view of all external entities. Next, we look at the development view of the project, which looks at the development process and the architecture of the web app. We look into the technical debt of the project and how it has evolved throughout the development. The final sections take a closer look at the deployment view and security perspective of the project. We conclude our analysis in the final section.
 
 
 # <a name="stake">Stakeholders</a>
@@ -41,7 +41,7 @@ Various stakeholders are involved in the development of a project. For the Matte
 ## Stakeholder Classes
 
 ### Acquirers
-The interest of the acquirers are rooted in the value of money the product provides as well as the direction of the company and product. The Mattermost project has several [acquirers](https://about.mattermost.com/company/) in the form of investors, which include the following organisations and people: [Y Combinator](http://www.ycombinator.com/), Rick Morrison, Evan Cheng and [Spectrum28](https://www.s28capital.com/) [[11]](#abou11). 
+The interest of the acquirers is rooted in the value of money the product provides as well as the direction of the company and product. The Mattermost project has several [acquirers](https://about.mattermost.com/company/) in the form of investors, which include the following organizations and people: [Y Combinator](http://www.ycombinator.com/), Rick Morrison, Evan Cheng and [Spectrum28](https://www.s28capital.com/) [[11]](#abou11). 
 
 ### Assessors
  We assume Mattermost Inc., the company who started the Mattermost project, assesses the system's conformance to standards and legal regulations.
@@ -88,8 +88,8 @@ Several individuals have been recognized as [core committers](https://docs.matte
 ### Mattermost Partners
 Mattermost provides [partner programs](https://docs.mattermost.com/process/partner-programs.html) to allow third parties to sell the Mattermost system or services related to Mattermost, to customers. 
 Three different partner programs are offered, based on the type of service the third party provides for customers. 
-  * Mattermost Authorized Partner Program, for one-time resale transactions to customers via a fullfilment partner
-  * Mattermost Value-Added Reseller Program, for on-going resellers who provide support in local language and timezone. Examples of resellers are CounterTrade, Adfinis SyGroup and bytemine.
+  * Mattermost Authorized Partner Program, for one-time resale transactions to customers via a fulfillment  partner
+  * Mattermost Value-Added Reseller Program, for on-going resellers who provide support in local language and time zone. Examples of resellers are CounterTrade, Adfinis SyGroup and bytemine.
   * Mattermost Deployment Solutions Partner Program, for organizations who can automate the deployment and maintenance process of Mattermost systems. Examples of deployment solution partners are Bitnami, GitLab and AppDome.
 
 A full list of certified Mattermost partners can be found on their [website](https://about.mattermost.com/partners/).
@@ -106,18 +106,18 @@ Power is related to the influence the stakeholder has on the decision making of 
 Interest is related to the interest the stakeholder has on the direction of the system. 
 We can identify how the various stakeholders are involved in this project, by putting them in one of the four quadrants.
 
-At the bottom left quadrant we observe stakeholders that monitor the system. 
+At the bottom left quadrant, we observe stakeholders that monitor the system. 
 These include customers, end users and system dependencies. 
 They do not exert much power over the system and only expect the system to function properly. 
 
-The top left quadrant contain stakeholders that exert a high amount of power. 
+The top left quadrant contains stakeholders that exert a high amount of power. 
 Investors are necessary for the funding of the project and must be kept satisfied in order for funding to continue. They usually do not meddle with the decision making for the system and thus their interests are low. 
 Partners are in a similar position, but their interests are higher because the system is directly involved in their line of business, thus they must also be kept informed about future developments.
 
 Looking at the top right quadrant, we have stakeholders that manage the system closely. This quadrant contains stakeholders that are involved in the development of the system, such as contributors, core committers, staff developers and the product managers. 
 The product managers have the highest power and interest, their interest in the system is to improve the system; they have the final word on every decision made on the system.
 
-Lastly we identify the stakeholders in the bottom right quadrant, the stakeholders that keep themselves informed such as competitors like Slack. 
+Lastly, we identify the stakeholders in the bottom right quadrant, the stakeholders that keep themselves informed such as competitors like Slack. 
 Slack keep themselves informed about the development of Mattermost, for their systems must be kept on the same level of quality for them to compete. 
 They do not have direct influence on the decision making of the system, their power is low.
 
@@ -125,13 +125,13 @@ They do not have direct influence on the decision making of the system, their po
 
 ## System Scope and Responsibilities
 
-Mattermost has a well defined scope for their system. During the [design process](https://docs.mattermost.com/process/design-process.html), the Mattermost team discusses what should be part of the scope for the new version. The [main scope](https://docs.mattermost.com/overview/product.html#mattermost-editions) for Mattermost's current version includes the following capabilities:
+Mattermost has a well-defined scope for their system. During the [design process](https://docs.mattermost.com/process/design-process.html), the Mattermost team discusses what should be part of the scope for the new version. The [main scope](https://docs.mattermost.com/overview/product.html#mattermost-editions) for Mattermost's current version includes the following capabilities:
 
 - Support one-to-one and group messaging, file sharing and unlimited search history
 - Provide native apps for iOS, Android, Windows, Mac, Linux
 - Support threaded messaging, emoji and custom emoji
-- Provide highly customizable third party bots, integrations and command line tools
-- Support integration via webhooks, APIs, drivers and third party extensions
+- Provide highly customizable third-party bots, integrations and command line tools
+- Support integration via webhooks, APIs, drivers and third-party extensions
 - Easily scalable from dozens to hundreds of users
 - New improvements released every two months
 - Support 14 languages include U.S. English, Chinese (Simplified & Traditional), Dutch, French, German, Italian, Japanese, Korean, Polish, Brazilian Portuguese, Russian, Turkish, and Spanish
@@ -143,10 +143,10 @@ Mattermost has a well defined scope for their system. During the [design process
 
 ## External Entities and Interfaces
 
-- The software is offered under either an [MIT Licence](https://www.mattermost.org/licensing/) or an [Apache License v2.0](https://www.mattermost.org/licensing/)
+- The software is offered under either an [MIT License](https://www.mattermost.org/licensing/) or an [Apache License v2.0](https://www.mattermost.org/licensing/)
 - Mattermost is used by high profile companies and institutions [[11]](#abou11) such as Uber, TU Delft, Symantec, Samsung, Wargaming.net etc. 
 - Mattermost also has integrations for various services such as [Bitbucket, Jira, and Jenkins, etc.](https://about.mattermost.com/community-applications/)
-- Mattermost is developed by community contributors, core commmiters, staff developers and product managers 
+- Mattermost is developed by community contributors, core committers, staff developers and product managers 
 - Communication is done through their own Contributors Mattermost Channel, forums, GitHub and Jira 
 - Docker provides a virtual machine for Mattermost servers to run and test on
 - Mattermost is mainly developed in Go and ReactJS
@@ -174,10 +174,10 @@ The webapp architecture contains several modules which are listed below [[6](#re
   * `actions` are any sort of logic that will result in the manipulation of a store state
   * `selectors` are the methods used to retrieve data from the state of the store
   * `dispatcher` is used to broadcast payloads to registered callbacks.
-  * `reducers` takes an action and an application state to perform state transitions, this module is unique to Redux.
+  * `reducers` take an action and an application state to perform state transitions, this module is unique to Redux.
 
 ### Flux and Redux
-The interaction between the modules is designed with Flux, a pattern that defines how React components performs actions and retrieve data in an one-directional flow. 
+The interaction between the modules is designed with Flux, a pattern that defines how React components performs actions and retrieve data in a one-directional flow. 
 Flux was implemented at a later stage of development, after the webapp was built with React. 
 The interaction between the modules and how Flux is applied is illustrated below [[2](#flux2)].
 
@@ -202,7 +202,7 @@ New features and bug fixes are tracked and added through Jira tickets. Tickets a
 
 The Mattermost core team has a concrete and unique development process. It draws ideas from Software Development Lifecycle approaches, such as Agile and Scrum.
 The whole process starts 15 work days prior to the release day until 10 work days after the release day.
-During the whole process, there are multiple parties from Mattermost involved, among which are the release manager, product manager, developers, logistic teams, quality assurance, marketing team, build team and project leads. Each of them are responsible for different tasks of the release.
+During the whole process, there are multiple parties from Mattermost involved, among which are the release manager, product manager, developers, logistic teams, quality assurance, marketing team, build team and project leads. Each of them is responsible for different tasks of the release.
 The following list shows the process of the integrating, testing and building of Mattermost. 
 
 * **Integration**: Mattermost does the integration at the beginning of release process.
@@ -225,7 +225,7 @@ The CI and translation servers are updated back to the master.
 ### <a name="i18n">Internationalization</a>
 The release cycle for internationalization or localization is different from the rest of the system.
 Quality levels are defined for each language [[10]](#loca10) to ensure that the final release is of high quality: 
-- Alpha quality level translations is defined as translations that have not yet reached Beta level.
+- Alpha quality level translations are defined as translations that have not yet reached Beta level.
 - For the Beta quality level, 90% of the translations must be verified by a Mattermost expert and a target language expert.
 - The Official quality level has all of the translations verified by a Mattermost expert and a target language expert. The target language must also have at least one official [reviewer](https://docs.mattermost.com/developer/localization.html) assigned by the Mattermost team who maintains the target language. The target language must also have been in use for at least 3 full release cycles.
 
@@ -235,7 +235,7 @@ Quality levels are defined for each language [[10]](#loca10) to ensure that the 
 
 In this subsection we identify the technical debt in the Mattermost project. 
 For this analysis we will focus on the webapp portion of Mattermost. 
-We will apply several methods to analyse the technical debt, including the use of automated analysis tools as well as manually looking through the code. 
+We will apply several methods to analyze the technical debt, including the use of automated analysis tools as well as manually looking through the code. 
 Due to the size of the codebase we will only manually look at the code for specific areas. We also look at potential design debts and architectural debts.
 
 ### <a name="id-1">Code Debt</a>
@@ -244,7 +244,7 @@ Mattermost uses the [ESLint](https://eslint.org/) linting tool to enforce standa
 The `.eslintrc.json` in the root directory contains the configuration for the ESLint tool.
 We run ESLint and other code analysis tools through the WebStorm IDE by Jetbrains. 
 After running a code inspection using WebStorm IDE, we observe ESLint reporting 617 errors. 
-Taking a closer look we discover several code smells.
+Taking a closer look, we discover several code smells.
 
 Firstly, there are issues with code line length. 
 The maximum amount of lines is set to 450 lines, and files such as `utils.jsx`, `sidebar.jsx`, `audit_table.jsx` and `user_settings_notifications.jsx` exceed this limitation.
@@ -279,7 +279,7 @@ Before the migration the component was not covered by any test, afterwards the c
 
 #### Future Goals
 
-The developers are fully aware of the implications of technical debt, and are careful with major refactoring of code. 
+The developers are fully aware of the implications of technical debt and are careful with major refactoring of code. 
 The developers maintain a [list](https://docs.google.com/spreadsheets/d/1f3oGV-8GnE3iVTlrliSMepf4C-7kIAoBn27s59hgPVM/edit?usp=sharing) of future improvements some of which are related to reducing the technical debt. 
 An example of this is the removal of JQuery, since it doesn't interact well with React and the API. 
 Their main goal with refactoring is to make code easier to test, which in turn should mean less bugs.
@@ -449,4 +449,4 @@ With people's growing awareness of privacy protection, Mattermost is surely goin
 <a name="cont12">[12]</a> "Contributors to mattermost/docs." Internet: https://github.com/mattermost/docs/graphs/contributors  
 <a name="staf13">[13]</a> "Staff Developers — Mattermost 4.8 documentation." Internet: https://docs.mattermost.com/process/developer.html  
 <a name="comm14">[14]</a> "Mattermost Community — Mattermost 4.8 documentation." Internet: https://docs.mattermost.com/process/community-overview.html  
-<a name="succ15">[15]</a> "Success Stories – Mattermost." Internet: https://about.mattermost.com/success-stories/ 
+<a name="succ15">[15]</a> "Success Stories – Mattermost." Internet: https://about.mattermost.com/success-stories/  
