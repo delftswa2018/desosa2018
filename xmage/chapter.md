@@ -119,7 +119,7 @@ The server supports plugins and plenty of them are available by default from the
 
 The Mage module dynamically loads all available plugins, however this only happens on the server, as the client gets updated by the server it does not need to load the plugins itself. It may be clear that this, lower level, architecture implemented is a plugin-architecture.
 
-The module organization of plugins is shown in Figure 8.
+The module organization of plugins is shown in Figure 5.
 
 ### Validity Assessment
 A third interesting part of the system is the validity assessment which happens during the build, verifies all implemented cards and runs all the tests. Cards are extensively validated to ensure that no duplicate or invalid card-names/-numbers/-types etc. exist. This allows the developers to assess that the thousands of cards are in a valid state before releasing a new version of the game.  
