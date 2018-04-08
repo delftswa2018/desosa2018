@@ -353,7 +353,7 @@ We can notice several similarities.
 * Also on the side, the current high scores are displayed. 
 * All games have a sorting function. Still, this feature is more developed for osu! for two major reasons:
     * First, you can download as many beatmaps as you want, unlike the other games who have a limited number of beatmaps,
-    * Being on PC, you can use the keyboard to search, which is impossible on other supports.
+    * Being on PC, you can use the keyboard to search, which is impossible on other platforms.
 
 All these common points allow players coming from any rhythm game to quickly adapt to osu!lazer's interface.
 
