@@ -41,10 +41,10 @@ Various stakeholders are involved in the development of a project. For the Matte
 ## Stakeholder Classes
 
 ### Acquirers
-The interest of the acquirers is rooted in the value of money the product provides as well as the direction of the company and product. The Mattermost project has several [acquirers](https://about.mattermost.com/company/) in the form of investors, which include the following organizations and people: [Y Combinator](http://www.ycombinator.com/), Rick Morrison, Evan Cheng and [Spectrum28](https://www.s28capital.com/) [[11]](#abou11). 
+The interest of the acquirers is rooted in the value of money the product provides as well as the direction of the company and product. The Mattermost project has several [acquirers](https://about.mattermost.com/company/) in the form of investors, which include the following organizations and people: [Y Combinator](http://www.ycombinator.com/), Rick Morrison, Evan Cheng and [Spectrum28](https://www.s28capital.com/) [[11]](#abou11).
 
 ### Assessors
- We assume Mattermost Inc., the company who started the Mattermost project, assesses the system's conformance to standards and legal regulations.
+We assume Mattermost Inc., the company who started the Mattermost project, assesses the system's conformance to standards and legal regulations.
 
 ### Communicators
 Product managers communicate a large portion of the concerns of the end users to the designers and engineers. The marketing and sales team communicates with clients and enterprises and are the ones to announce new releases of Mattermost.
