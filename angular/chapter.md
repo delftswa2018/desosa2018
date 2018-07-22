@@ -2,8 +2,8 @@
 
 ![Angular](misc/angular.png)
 
-[Blazej Kula](https://github.com/blaz11) | [Arvind Chembarpu](https://github.com/arvindch) | [Algirdas Jokūbauskas](https://github.com/algirdyz) |
-| :---: | :---: | :---: |
+| [Blazej Kula](https://github.com/blaz11) | [Arvind Chembarpu](https://github.com/arvindch) | [Algirdas Jokūbauskas](https://github.com/algirdyz) |
+| --- | --- | --- |
 | ![Blazej Kula](misc/blazej.jpg) | ![Arvind Chembarpu](misc/arvind.jpg) | ![Algirdas Jokūbauskas](misc/algirdas.jpg) |
 
 *Delft University of Technology*
