@@ -1,7 +1,7 @@
 # Summary
 
 * [Akka](akka/chapter.md)
-* [AngularJS](angularjs/chapter.md)
+* [Angular](angular/chapter.md)
 * [Docker](docker/chapter.md)
 * [Eden](eden/chapter.md)
 * [ElasticSearch](elasticsearch/chapter.md)
