@@ -1,6 +1,6 @@
 ## Electron | Build cross-platform desktop apps with JavaScript, HTML, and CSS
 
-<img src="images/team-electron.jpg">
+![](images/team-electron.jpg)
 
 By [Shivam Miglani](https://github.com/Shivam-Miglani) and [Sharad Shriram](https://github.com/sharadshriram), Delft University of Technology.
 
@@ -27,7 +27,8 @@ Developing desktop GUI applications is laborious and it requires Operating Syste
 
 The applications built from Electron consist of two types of processes: the main process and multiple renderer processes which follow a *master-slave* pattern. The main process of the application is the master and the multiple renderer processes are the slaves which communicate using Inter-Process Communication (IPC). Fig. 1 shows that this is analogous to a Chromium browser where there is one main window and multiple tabs (renderer processes).	
  	 
-<a name="fig1"><img src="images/main-renderer.png" width="60%" height="60%" alt="Multiple tabs as renderer processes."></a>
+<div id="fig1"/>
+![](images/main-renderer.png)
 
 *Figure 1: One Main process with Multiple renderer processes. This is analogous to a window of Chromium browser with multiple tabs*	
 
@@ -73,7 +74,8 @@ The following stakeholders identified are additional stakeholders who do not mat
 ### Quantifying the stakeholder's involvement:  Power vs Interest Grid 
 Mendelow's power/interest grid[[5]](#ref5) is used to classify the groups of stakeholders necessary to be managed closely. Figure [2](#fig2) shows that the core developers, committer team, active contributors from prominent products like Skype, Slack, etc. using Electron are stakeholders who have both high interest and power. These are the people that actively contribute to and maintain the project and need to be managed closely. Teachers and projects that use Electron without active contributions show high interest but have low power and must be informed well. Electron’s dependencies have low interest and low power. The power of Chromium is slightly higher because it influences Electron's future developement as explained in the [development viewpoint](#view2).
 
-<a name="fig2"></a><img src="images/powerinterestgrid_final.png">
+<div id="fig2"/>
+![](images/powerinterestgrid_final.png)
 
 *Figure 2: Power Interest Grid of Electron where the interest of the stakeholder is shown on the horizontal axis and the power of the stakeholder is shown on the vertical axis.*
  
@@ -92,8 +94,9 @@ In this section, we describe the context, development and deployment viewpoints 
 
 The context view describes the scope and responsibilities, relationships, dependencies and interactions around Electron [[3]](#ref3), as shown in Figure [3](#fig3).
 
-<a name="fig3"></a><img src="images/contextview_final.jpg">
-<img src="images/legend.png" width="70%" height="80%">
+<div uid="fig3"/>
+![](images/contextview_final.jpg)
+![](images/legend.png)
 
 *Figure 3: Context View of Electron showcasing relationships with its environment*
 
@@ -117,16 +120,16 @@ Electron combines Chromium's *single thread multi-process* model[[18]](#ref22) a
 
 The *layered architecture* shown in Figure [4](#fig4) gives a very high-level overview of Electron and applications built using Electron. In this section, the development view of Electron's core is summarized using module organization and dependencies, common design models and codeline models
 
-<a name="fig4"></a><img src="images/architecture.png" width="90%" height="90%" alt="Development View of Electron">
-
+<div id="fig4"/>
+![](images/architecture.png)
 *Figure 4: Layered Architecture of Electron*
 
 <a name="module"></a>
 #### Module Organization
 Apart from reducing size, the customized forked embeddings of Chromium and Node removes the need for external interfacing dependencies, and improves speed and performance through preconfiguration of dependencies. The module organization in Figure [5](#fig5) demonstrates **high cohesion** through *Electron Core block* and **low coupling** as demonstrated through custom embeddings of the dependencies in *Electron extensions*, which is an example of good software design.
 
-<a name="fig5"></a><img src="images/module.png" width="100%" height="100%" alt="module-structure-diagram"></a>
-
+<div id="fig5">
+![](images/module.png)
 *Figure 5: High-level module organization of [`electron/electron`](https://github.com/electron/electron) repository and the other [45 repositories](https://github.com/electron/) where the links to external dependencies are shown in color *blue* whereas internal dependencies in Electron's core are shown in *green*.*
 
 Now we explain the 3 blocks in the diagram:
@@ -161,9 +164,9 @@ Now we explain the 3 blocks in the diagram:
         2. [``clipboard``](https://electronjs.org/docs/api/clipboard) performs copy and paste operations on the system clipboard.
   
 
-<a href="api"></a>
-<a name="fig6"></a><center><img src="images/venn.png" width="70%" height="75%" alt="Venn diagram of API modules"></center>
-
+<div id="api"></div>
+<div id="fig6"/>
+![](images/venn.png)
 *Figure 6: Venn Diagram of Electron module APIs to be used by developed application's main and renderer process. The universal set is other node.js module APIs which are available globally.*
  
 - *Script,spec and tools modules*: ``script`` contains scripts used for development purposes like building, packaging and testing. ``spec`` contains automatic tests for the framework APIs (main, renderer and common), packaging formats (asar), version checks etc. ``tools`` contains non user centric helper functions. The [framework (API) modules](#api) use ``tools`` as helper functions and ``spec`` for creating automatic tests.
@@ -185,7 +188,7 @@ Commonality across the different versions of Electron is done by defining a set 
 
   - *Internal and external interfacing* in Electron is applicable to both the framework and application APIs. In the framework, the different code modules and method invocations between the framework are internal interfacings whereas the Node and Chromium modules used the account as external interfacing. In applications, the [API](https://electronjs.org/docs/api) bindings between the main process and renderer processes are internal whereas additional Node packages that are used on applications as add-ons are the external interfacing.
 
-<a href="design"></a>
+<a name="design"></a>
 - *Standardization of Design*:
 Electron's [development guide](https://electronjs.org/docs/development/) documents the steps for issue creation, contributing to issues, making pull requests in accordance to the [conduct of conduct](https://github.com/electron/electron/blob/master/CODE_OF_CONDUCT.md) which is adhered by every developer and contributor. This section briefly summarizes the design standards laid out for Electron.
 
@@ -200,7 +203,7 @@ Electron's [development guide](https://electronjs.org/docs/development/) documen
     4. JavaScript engines used in Electron are written in the [standard](https://npm.im/standard) style with the newer ES6/ES2015 syntax where appropriate.
     5. Naming Conventions for files and variables in the source code is a good design practice which makes the code base consistent and stable for continuous development. In Electron, file names should be concatenated with ``-`` instead of ``_`` and naming variables in code is similar to Node.js as Electron APIs uses the same capitalization scheme. 
 
-<a href="test"></a>
+<a name="test"></a>
 - *Standardization of Testing*:  Testing in Electron can be done in the framework and application levels. In this section, the tools used in Electron for testing is discussed,
 
   - *Framework Testing* in Electron is a continuous testing framework to maintain stable builds[[16]](#ref16). Electron uses [Jenkins](https://mac-ci.electronjs.org/blue/organizations/jenkins/Electron%20org%2Felectron/activity/?branch=master) for continuous integration tests on builds in Mac and Linux, AppVeyor[[16]](#ref16) for Windows, and [Circle CI](https://electronjs.org/docs/tutorial/testing-on-headless-ci) for pull requests. 
@@ -268,8 +271,8 @@ Electron
 
 In the previous sections, a view of the dependencies which make Electron work is described. This section summarizes the system requirements and additional frameworks to successfully run Electron. We now explain the Figure deployment view of Electron as illustrated in figure [7](#fig7).
 
-<a href="fig7"></a><img src="images/deployment.jpg" alt="deployment view" height="80%" width="80%">
-
+<div id="fig7"/>
+![](images/deployment.jpg)
 *Figure 7: Deployment view of Electron.*
 
 - *Third-party software requirements*:
@@ -298,15 +301,13 @@ We give an overview of evolution perspective of Electron and also depict some in
 
 Electron started as a fork of [NW.js[6]](#ref6) for building GitHub's Atom editor and was called Atom-Shell in 2013. The project was developed a [Cheng Zhao](https://github.com/zcbenz), an intern at GitHub. By spring 2014[[2]](#ref2), Atom and Atom-Shell branched out into two separate projects. Atom-Shell was renamed as Electron in 2015 and in 2016 Electron reached version 1.0 with the support to publish apps to Mac and Windows App Store. In the perspecitve of technical debt(TD), this is an indication of single-point of failure in terms of only one contributor [Cheng Zhao](https://github.com/zcbenz), which can be inferred from the code additions to the project in Figure [8](#fig8). 
 
-<a href = "fig8"></a>
-<img src="images/codeAddition.jpg" alt="code addition" height="80%" width="75%"></img>
-
+<div id="fig8"/>
+![](images/codeAddition.jpg)
 *Figure 8: Electron's dependence on Cheng Zhao, a single-point of failure type of Technical Debt*
 
 After 2015, around the time when Electron branched out from Atom more core developers like [@zeke](https://github.com/zeke) joined and the single-point of failure TD started to reduce gradually as seen in Figure [9](#fig9). To minimize TD in the code level the core developers standardized [writing](#design) and [testing](#test) contributions to ensure stable builds which has helped Electron develop at a rapid pace attracting many new contributors to the project.
 
-<img src="images/activeDevelopment.jpg" alt="active development" height="80%" width="75%"></img>
-
+![](images/activeDevelopment.jpg)
 *Figure 9: Electron's development timeline*
 
 From Rozanski and Woods [3](#ref3), the evolution perspective is defined by:
@@ -330,17 +331,20 @@ At the time of writing this chapter the major update version 2.0.0 is in the fin
 Following are the results we got from using [SonarQube](https://www.sonarqube.org/) to assess the code quality of core electron repository:
 
 - Code Smells: Code smell analysis shows 2 days technical debt, which is very low considering the size and lines of codes in Electron. The 140 code smells depicted were not representative of real issues and were from the limitation of selecting primary language in SonarQube as JavaScript. About 70 of these were about refactoring function names which is not applicable to C++ files. The real code smell founds were  mostly in testing and scripting files which don't form an important component for core of Electron and does not affect it's stability. The figure also shows the maintainability rating `A` for all files except one testing file. Hence, we can say current version of `master` of electron is maintained pretty well. 
-<img src="images/codesmell0.png" alt="module_dependency_overview" height="80%" width="75%"></img>
-<img src="images/codesmell.png" alt="module_dependency_overview" height="80%" width="75%"></img>
+
+![](images/codesmell0.png)
+![](images/codesmell.png)
 
 
 - Duplicates: There are only 4% duplications found which again comes from testing code. Our analysis states that these duplicates cannot be avoided due to the nature of `describe-it` statements in [Mocha](https://mochajs.org/) and [Chai](https://chaijs.org/) testing frameworks.
 
 Still, one can say that testing methods have a little bit of technical debt in terms of code smells and duplicates but electron developers do discuss about these through TODOs and FIXMEs as explained in point 4 below. 
-<img src="images/dup.png" alt="module_dependency_overview" height="80%" width="75%"></img>
+
+![](images/dup.png)
 
 - Bugs and Vulnerabilities: SonarQube detected 15 bugs and 3 security vulnerabilities. The bugs were related to coding style such as defining functions outside loop and argument mismatch. Only one of them was critical in nature and was related to how `eval` function was used at runtime to call an object's property. The solution is to call the object's property at compile time. It also estimates security remediation would take only about an hour to fix all three of them. Again, this is extremely low number of bugs and security warnings compares to the size of electron.
-<img src="images/bugs.png" alt="module_dependency_overview" height="80%" width="75%"></img>
+
+![](images/bugs.png)
 
 #### Results from github-grep for TODOs and FIXMEs
  The developers of Electron do discuss about the technical debt there is and they communicate through code as well as github issue tracking by mentioning TODOs and FIXMEs. We used `github -grep` to find TODOs and FIXMEs in the code. In total there were 79 TODOs and 46 FIXMEs found. Each of them decribed who wrote it and/or who will fix it. Examples are shown below:
@@ -373,7 +377,7 @@ Chromium has an off-the-shelf sandbox to run processes which can freely use CPU 
 
 To provide applications with desktop functionality, the Electron team modified Chromium to introduce a runtime to access native APIs as well as Node.js’s built in and third-party modules. To do this the Chromium sandbox protection was disabled, meaning any application running inside Electron is given unfiltered access to the operating system.
 
-<img src="images/electron-sandbox.png">
+![](images/electron-sandbox.png)
 
 *Figure 15: Electron's architecture combined with disabled Chromium sandboxes [[28]](#ref28)*
 
