@@ -3,7 +3,7 @@
 ## Team members
 | [Aravindakshan Ramesh](https://github.com/dakshan07) |  [Mohammed Al-Owayyed](https://github.com/ExtraMHD) | [Myeongjung Park](https://github.com/Myeongjung) | [Louis Sikkes](https://github.com/lsikkes) |
 | --- | --- | --- | --- |
-| <img src="https://github.com/delftswa2018/team-eden/blob/master/images/10906204_903170063036163_581311651626465853_n.jpg" height=200px> | <img src="https://github.com/delftswa2018/team-eden/blob/master/images/MO.jpg" height=200px> | <img src="https://github.com/delftswa2018/team-eden/blob/master/images/MJ.jpg" height=200px> | <img src="https://github.com/delftswa2018/team-eden/blob/master/images/Louis-Sikkes.JPG" height=200px> |
+| <img src="images/10906204_903170063036163_581311651626465853_n.jpg" height=200px> | <img src="images/MO.jpg" height=200px> | <img src="images/MJ.jpg" height=200px> | <img src="images/Louis-Sikkes.JPG" height=200px> |
 
 # Abstract
 
@@ -55,12 +55,12 @@ Going beyond the book we have identified stakeholders which do not directly fall
 - Researchers and Scientist: They research and present findings of the system through journals. They are also integral in improving the functionality of the system. For instance Pictographs in Disaster Information Communication for the Linguistically Challenged is a core-recognition project, funded by the Humanitarian Innovation Fund of UK.
 - Media: They present unambiguous and reliable sources of information and is vital in the communication of the system to people and developers who are interested in new challenges and projects. Sahana software and its role supporting post-tsunami disaster relief in Sri Lanka were featured in the 2006 BBC World documentary The Code-Breakers.
 
-| ![Power Interest Diagram](https://github.com/delftswa2018/team-eden/blob/master/images/power%252Finfluence%20grid%20(power%252Finfluence%20matrix).png) |
+| ![Power Interest Diagram](images/power.png) |
 |:--:| 
 | *Power interest diagram: We have analyzed the stakeholders and grouped them in a diagram to give a better understanding of who to monitor and how.* |
 
 # Context View
-![Context View](https://github.com/delftswa2018/team-eden/blob/master/images/ContextDiagram.png)
+![Context View](images/ContextDiagram.png)
 The context view describes the relationship, dependencies and relationships of the system with its environment. In the diagram above we have split these into groups that we have derived from the stakeholder analysis and the external entities that we will now discuss.
 - Governmental and non-governmental organizations: The external entities contained in this group range from government departments and the police to healthcare organizations like the Red Cross. These organizations make use of all external interfaces of the system. We will describe the three most important ones now: alerting, importing and exporting and printing maps. These will be explained later in the document.
 - Volunteers: Besides big organizations, individual volunteers can also help during a disaster. These people will not have a wide variety of assets or inventory and will therefore not use all external interfaces of the system. The main focus of these people lies in receiving alerts whenever something happens or letting organisations know their skills and availabilities.
@@ -72,7 +72,7 @@ Before we start to contribute to the Sahana Eden, we have to know how the system
 ## Component overview
 Sahana Eden contains many different modules which can be configured to provide a wide range of functionality. Since these modules are easily customizable, they can provide solutions in a wide variety of contexts. This further enhances by the fact that these modules can be enabled or disabled to provide the needs of the deployer. In this section, we will outline these and explain what purpose they serve. The information found here has been extracted from a brochure found on the Sahana Eden website [3].
 
-| ![ModuleOverview](https://github.com/delftswa2018/team-eden/blob/master/images/Module%20Overview%20(1).png) |
+| ![ModuleOverview](images/module-overview.png) |
 |:--:| 
 | *Module Overview: After analyzing all modules we have created the following diagram to visualize their dependencies on each other.* |
 
@@ -107,7 +107,7 @@ In this section, we will describe the components that make up the code of the pr
 
 We can see in the picture below that there are 6 main folders. In the repository itself, there are four more folders on the same level. These folders are 'cron', 'docs', 'private' and 'tests'. In the 'docs' and 'private' folders, we found some documents unrelated to the rest of the code so we will only not analyze these any further. While observing the repository we found very minimal use of a folder structure within these specified folders, most of them contain a bunch of files that do a wide variety of things. 
 
-| ![Folder Structure](https://github.com/delftswa2018/team-eden/blob/master/images/Eden-folder-structure.PNG) | 
+| ![Folder Structure](images/Eden-folder-structure.PNG) | 
 |:--:| 
 | *Folder structure of the repository* |
 
@@ -142,7 +142,7 @@ From the website, we found that unit tests are used to detect problems early dur
 ## Bugs & Reliability
 SonarQube rated Sahana Eden's reliability as an E (from A to E), which means there is at least 1 blocker bug presented in the program. Upon further inspection, it was discovered that SonarQube flags Python 2 code as errors if the code  is not compatible with Python 3. Thus, Python 2 -specified errors were eliminated to judge the code quality fairly. Bugs that do not create errors or affect the program’s behavior are still present in the major and minor code, but with an overall better rating of B instead of E. Most of the major issues were due to the absence of HTML5 format that SonarQube checks (e.g., deprecated elements such as center), similar to the Python 2 issue discussed previously. Overall, the code is well-written and reliable with few to no bugs affecting the behavior, but could benefit from using more modern versions to keep all files up to date (i.e., Python 3 and HTML5).
 
-| ![Bugs distribution](https://github.com/delftswa2018/team-eden/blob/master/images/Bugs.PNG) | 
+| ![Bugs distribution](images/Bugs.PNG) | 
 |:--:| 
 | *An Overview of reliability and bugs* |
 
@@ -151,7 +151,7 @@ In this section, we will discuss the vulnerabilities that were found by SonarQub
 
 We first analyse the critical vulnerabilities, which only 1 type of issues was found: validating arguments before making a function call. Although this is faster than dynamically evaluating the code, it can expose the program to random, unintended code which can pose a security risk. When analyzing the minor vulnerabilities are concerned with hardcoded IP addresses (like localhost) or debug code still there. 
 
-![Vulnerabilities](https://github.com/delftswa2018/team-eden/blob/master/images/Vulnerabilities.png)
+![Vulnerabilities](images/Vulnerabilities.png)
 
 ## Code Smells 
 In this section, we talk about the Code Smells which we derived from SonarQube. We basically look at how simple or how complicated the code is and look to enhance their code with solutions which we deem can satisfy the technical debt and improve the overall quality of the code. SonarQube found 14.000 code smells. The minor errors mostly deal with renaming local variables and removing empty statements, due to time constraints we leave it out not because they are not important but they do not need immediate attention right away. SonarQube gives a maintainability rating as A since the technical debt ratio is less than 5%. 
@@ -161,7 +161,7 @@ The below comments are treated as critical and major by SonarQube. These errors 
 ## Duplications
 We have found several files that were completely duplicated. Below in the figure is a Treemap, generated by SonarQube of duplications on directory level in the Sahana Eden project.
 
-| ![Folder Structure](https://github.com/delftswa2018/team-eden/blob/master/images/Duplication.PNG) |     
+| ![Folder Structure](images/Duplication.PNG) |     
 |:--:| 
 | *Treemap of duplications* |
  
@@ -174,13 +174,13 @@ In this section, we identify how Sahana Eden has attempted to improve the techni
 
 First, we filtered the major and critical issues with code smells in SonarQube. The result is the following:
 
-| ![Historical analysis](https://github.com/delftswa2018/team-eden/blob/master/images/sonarqube_historical.PNG) |     
+| ![Historical analysis](images/sonarqube_historical.PNG) |     
 |:--:| 
 | *Historical analysis by SonarQube* |
 
 As can be seen in image, most files have not changed since they were created 6 years ago. This image only shows the code smell part. Also, bug and vulnerability sections showed almost the same results. One thing we could find latest changes in is vulnerability. The changes were in simple syntax errors (e.g., if (delay == 'undefined') to if (delay == undefined)). However these changes are not the issues detected by SonarQube.
 
-| ![Code frequency](https://github.com/delftswa2018/team-eden/blob/master/images/github_historical.PNG) |     
+| ![Code frequency](images/github_historical.PNG) |     
 |:--:| 
 | *Code frequency in Github* |
 
@@ -233,7 +233,7 @@ Mapping API:
 - OpenLayers provides access to a wide range of data sources, from public services based on OGC standards.
 - GeoExt provides UI widgets to allow the user to interface with the map.
 
-| ![Deployment View ](https://github.com/delftswa2018/team-eden/blob/master/images/deployment%20view%20%20(2).png)| 
+| ![Deployment View ](images/deployment-view.png)| 
 |:--:| 
 | *Deployment View of Sahana Eden* |
 
