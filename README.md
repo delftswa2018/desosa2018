@@ -2,7 +2,7 @@
 
 
 **[Arie van Deursen], [Andy Zaidman], [Maurício Aniche], [Liam Clark], [Gijs Weterings] and [Romi Kharisnawan].**<br/>
-*Delft University of Technology, The Netherlands, April, 2018*
+*Delft University of Technology, The Netherlands, July, 2018*
 
 [arie van deursen]: https://avandeursen.com
 [Andy Zaidman]: http://www.st.ewi.tudelft.nl/~zaidman/
