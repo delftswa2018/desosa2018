@@ -17,7 +17,6 @@
 * [Phaser](phaser/chapter.md)
 * [React](react/chapter.md)
 * [Spark](spark/chapter.md)
-* [Three.js](threejs/chapter.md)
 * [TypeScript](typescript/chapter.md)
 * [Vue.js](vuejs/chapter.md)
 * [Xmage](xmage/chapter.md)
