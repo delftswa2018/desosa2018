@@ -12,16 +12,16 @@
 [Romi Kharisnawan]: https://www.linkedin.com/in/romikharisnawan
 
 We are proud to present the fourth edition of
-_Delft Students on Software Architecture_, a collection of 20 architectural descriptions of open source software systems written by students from Delft University of Technology during a [master-level course][in4315] taking place in the spring of 2018.
+_Delft Students on Software Architecture_, a collection of 20 architectural descriptions of open source software systems written by students from Delft University of Technology during a [master-level course][in4315] that took place in the spring of 2018.
 
-[in4315]: http://www.studiegids.tudelft.nl/a101_displayCourse.do?course_id=38330
+[in4315]: http://www.studiegids.tudelft.nl/a101_displayCourse.do?course_id=43417
 
-In this course, teams of approximately 4 students could adopt a project of choice on GitHub.
+In this course, teams of approximately 4 students could adopt an open source project of choice on GitHub.
 The projects selected had to be sufficiently complex and actively maintained (one or more pull requests merged per day).
 
 During an 8-week period, the students spent one third of their time on this course, and engaged with these systems in order to understand and describe their software architecture.
 
-Inspired by Brown and Wilsons' [Architecture of Open Source Applications][aosa], we decided to organize each description as a chapter, resulting in the present online book.
+Inspired by Amy Brown and Greg Wilson's [Architecture of Open Source Applications][aosa], we decided to organize each description as a chapter, resulting in the present online book.
 
 
 ## Recurring Themes
@@ -35,7 +35,7 @@ The course used  Rozanski and Woods' [Software Systems Architecture][rw], and th
 
 The first theme is outward looking, focusing on the use of the system.
 Thus, many of the chapters contain an explicit [stakeholder analysis], as well as a description of the [context] in which the systems operate.
-These were based on available online documentation, as well as on an analysis of open and recently closed issues for these systems.
+These were based on available online documentation, as well as on an analysis of open and recently closed (GitHub) issues for these systems.
 
 [context]: http://www.viewpoints-and-perspectives.info/home/viewpoints/context/
 [stakeholder analysis]: http://www.mindtools.com/pages/article/newPPM_07.htm
@@ -43,14 +43,18 @@ These were based on available online documentation, as well as on an analysis of
 A second theme involves the [development viewpoint][development], covering modules, layers, components, and their inter-dependencies.
 Furthermore, it addresses integration and testing processes used for the system under analysis.
 
-[development]: http://www.viewpoints-and-perspectives.info/home/viewpoints/
+[development]: https://www.viewpoints-and-perspectives.info/home/viewpoints/development/
 
-A third recurring theme is _technical debt_. Large and long existing projects are commonly vulnerable to debt.
+A third recurring theme is [technical debt][debt]. Large and long existing projects are commonly vulnerable to debt.
 The students assessed the current debt in the systems and provided proposals on resolving this debt where possible.
+
+[debt]: https://speakerdeck.com/avandeursen/lehman-versus-lehman-dealing-with-debt?slide=2
+
+Besides these common themes, students were encouraged to take additional [viewpoints] and [perspectives], addressing, e.g., security, privacy, regulatory, evolution, or product configuration aspects of the system they studied.
 
 ## First-Hand Experience
 
-Last but not least, the students tried to make themselves useful by contributing to the actual projects.
+Last but not least, all students made a substantial effort to try to contribute to the actual projects.
 With these contributions the students had the ability to interact with the community; they often discussed with other developers and architects of the systems. This provided them insights in the architectural trade-offs made in these systems.
 
 The students have written a collaborative chapter on some of the contributions made during the course. It can be found in the dedicated [contributions chapter][contrib-chapter].
@@ -75,7 +79,7 @@ We value your feedback on any of the material in the book. For your feedback, yo
 
 We would like to thank:
 
-* Our guest speakers: [Bert Wolters], [Sander Knape], [Allard Buijze], and [Bob Bijvoet].
+* Our 2018, guest speakers, offering students an industrial perspective on software architecture: [Bert Wolters], [Sander Knape], [Allard Buijze], and [Bob Bijvoet].
 * All open source developers who helpfully responded to the students' questions and contributions.
 * The excellent [gitbook toolset] and [gitbook hosting] service making it easy to publish a collaborative book like this.
 
