@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="images/team.jpg" alt="React Team Image">
-</p>
+![](images/team.jpg)
 
 # Abstract
 
@@ -119,12 +117,8 @@ Regarding these users, it should be mentioned that *React Native* is an implemen
 
 To measure stakeholder influence and to dictate the level of communication a stakeholder must receive regarding *React*, a power-interest matrix was constructed. This matrix indicates stakeholders of increasing interest on the *x*-axis, and stakeholders of increasing power upon the *y*-axis. A stakeholder that is high power and low interest must be kept satisfied and informed only when necessary, whereas a stakeholder with low power but high interest should be informed and kept up to date, but not necessarily catered to. Stakeholders with both significant interest and power must be maintained closely, as they steer the project. The overview in figure 2.1 contains the most active contributors and most influential organizations.
 
-<p align="center">
-  <img src="diagrams/power-interest-diagram-d4.png" alt="Stakeholder Influence Diagram">
-</p>
-<p align="center">
-  <small><i>Figure 2.1: a diagram showing stakeholder power versus stakeholder interest.</i></small>
-</p>
+![](diagrams/power-interest-diagram-d4.png)
+*Figure 2.1: a diagram showing stakeholder power versus stakeholder interest.*
 
 # 3. Context View
 
@@ -142,12 +136,8 @@ The system scope defines the main responsibilities that *React* provides, which 
 
 The context model, as shown in figure 3.1, depicts the many associated external dependencies related to *React*. They have been grouped where possible and the arrows represent what kind of relationship the entity has with *React*. A quick summation is made whereafter the [external entities](#external-entities) will be described in more detail.
 
-<p align="center">
-  <img src="diagrams/context-model.png" alt="Context Model Diagram">
-</p>
-<p align="center">
-  <small><i>Figure 3.1: an overview of the external dependencies related to React.</i></small>
-</p>
+![](diagrams/context-model.png)
+*Figure 3.1: an overview of the external dependencies related to React.*
 
 The center of the diagram shows *React* itself surrounded by the many different external entities. The left side shows the grouped [testing tools](#testing-tools) and they are further divided into two main testing setups: a static and dynamic testing setup. Next to the testing section on the left bottom the [community](#communication-channels) is located which is a large group including seven entities. The right of the community shows the [parties that integrate with React](#integrating-libraries-and-frameworks): the most important and popular entities have been picked and grouped here. Moving in counter-clockwise direction the [renderers](#render-targets) along with the browsers above them which implement the DOM are showed. In the right top corner the most popular and important [competitors](#competitors) are visualized.
 
@@ -244,12 +234,8 @@ Core packages provide the main functionalities of *React*. The core packages of 
 
 Figure 4.1 represents the organization of *React*, and displays these as interdependent modules.
 
-<p align="center">
-  <img src="diagrams/module-structure-model.png" alt="Module Structure Model">
-</p>
-<p align="center">
-  <small><i>Figure 4.1: an overview of all the modules within React.</i></small>
-</p>
+![](diagrams/module-structure-model.png)
+*Figure 4.1: an overview of all the modules within React.*
 
 ## 4.2 Codeline Model
 
@@ -277,9 +263,7 @@ For the developers to work concurrently they use *git* which provides version co
 | shared                | (We spent some time researching what this package is for, but were unable to find any information on it.) |
 | simple-cache-provider | Unstable package which includes a cache for *React* applications. |
 
-<p align="center">
-  <small><i>Figure 4.2: Codeline package structure and relations.</i></small>
-</p>
+*Figure 4.2: Codeline package structure and relations.*
 
 #### 4.2.1 Module inter-relatedness
 
@@ -351,9 +335,7 @@ The dynamic code analysis was performed by measuring the test coverage generated
 | noop-renderer       | ReactNoop                 | 64.90%     |
 |                     | TOTAL                     | 89.92%     |
 
-<p align="center">
-  <sub><sup><i>Table 5.1: overview of packages/files, and their associated test coverage percentage value.</i></sub></sup>
-</p>
+*Table 5.1: overview of packages/files, and their associated test coverage percentage value.*
 
 As the table shows, the overall coverage for *React* is 89.92%, a significant coverage metric, indicating good code quality. However, the largest discrepancies in coverage results are found in the *reactCurrentOwner*, *unstable-dependencies*, and *ReactNoop*. The *reactCurrentOwner* and *unstable-dependencies* sections are both positive outliers due to their perfect test coverage. This score is attributed to the fact that these classes validate that certain subclasses or dependencies are called in a certain order. If any tests invokes any part of these sub-classes, the top level classes receive maximum possible coverage. The negative case is the *ReactNoop JavaScript* file, which is a renderer aimed at allowing for the testing of semantics outside of the actual *React* environment. This class has a low coverage, mostly due to the fact that branches are barely tested and error handling is not tested. Since this class aims to validate semantic behavior, many catch-throw operations take place, yielding many errors, which are not tested.
 
@@ -365,9 +347,7 @@ if CONDITION TO TEST < SHOULD NOT OCCUR {
 }
 ```
 
-<p align="center">
-  <small><i>Figure 5.2: theoretical example of untested failure cases.</i></small>
-</p>
+*Figure 5.2: theoretical example of untested failure cases.*
 
 Of the packages that have less than 80% coverage, *react-call-return* and *simple-cache-provider* are noted in their respective README’s to be very unstable and prone to changes, which explains their lower test coverage. Furthermore, *react-noop-renderer* is not meant for direct use. *React-art*, which has the lowest result of these packages, is used primarily for drawing. It is speculated that, since a flaw in this package would only cause cosmetic errors, thorough testing was deemed of lesser importance for this particular package, but this is mere conjecture.
 
@@ -657,3 +637,4 @@ Please note that a more extended version of this chapter, including additional i
 [75] https://www.robinwieruch.de/tips-to-learn-react-redux/#react-test-often
 
 [76] http://reactkungfu.com/2015/07/approaches-to-testing-react-components-an-overview/
+
