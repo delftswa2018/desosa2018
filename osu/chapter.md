@@ -321,7 +321,7 @@ For this part, we will sometimes compare the interfaces of the current software 
 
 First, let's review the touch points of osu!lazer, ie all the places where the user interacts with osu!lazer. The following graph shows how the user jumps from one touch point to another. The peripheral used for each is mentioned. The term "pointing device" is grouping both mouse and drawing tablet, as many players are using a tablet to be able to aim the targets using absolute positioning. Keyboard-oriented interactions are in blue, while pointing-oriented interactions are in pink. Logically, touch points relying on both peripherals are in violet.
 
-![Touch points](./touch_points.svg)
+![Touch points](./touch_points.png)
 <br> **Figure 10** - _Touch points in osu!'s interface_
 
 
