@@ -8,10 +8,6 @@ Contributors:
 * Jeroen Vrijenhoef (1307037)
 * Ka Wing Man (4330714)
 
-Former contributor:
-
-* Haris Adzemovic (4760891)
-
 
 # Abstract
 
@@ -20,6 +16,9 @@ The aim of the entire project is to meet each developer's needs by providing not
 This chapter provides different views and perspectives of the project, with the aim to create the possibly most complete overview of the architecture itself and all the things that are involved around it. 
 These views and perspective range from the stakeholders analysis to the developers perspective, highlighting the key architectural and functional features of Jenkins (and how it interacts with its plugins).
 Furthermore, we will conclude the chapter presenting an evolution perspective to highlight the key phases of the development of Jenkins, and a brief conclusion of what we think of the project itself. 
+
+**Acknowledgments:**
+We thank former team member Haris Adzemovic for his contributions to this chapter.
 
 # Introduction
 
