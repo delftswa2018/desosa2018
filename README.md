@@ -12,7 +12,7 @@
 [Romi Kharisnawan]: https://www.linkedin.com/in/romikharisnawan
 
 We are proud to present the fourth edition of
-_Delft Students on Software Architecture_, a collection of (TODO) architectural descriptions of open source software systems written by students from Delft University of Technology during a [master-level course][in4315] taking place in the spring of 2018.
+_Delft Students on Software Architecture_, a collection of 20 architectural descriptions of open source software systems written by students from Delft University of Technology during a [master-level course][in4315] taking place in the spring of 2018.
 
 [in4315]: http://www.studiegids.tudelft.nl/a101_displayCourse.do?course_id=38330
 
