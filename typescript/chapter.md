@@ -5,7 +5,7 @@
 <a href="https://github.com/mpsijm" target="_top">Maarten Sijm</a> and
 <a href="https://github.com/Diocruel" target="_top">Robin van der Wal</a></strong>
 <br><em>Delft University of Technology</em></p>
-<p><br><img src="img/TypeScriptLogo.svg" alt="Official TypeScript Logo - Apache License 2.0">
+<p><br><img src="img/TypeScriptLogo.png" alt="Official TypeScript Logo - Apache License 2.0">
 <br><em>Official TypeScript Logo (on GitHub <a href="#cite-1">[1]</a>)</em></p>
 <h2 id="abstract">Abstract</h2>
 <p>TypeScript is a programming language that brings types to JavaScript.
@@ -202,7 +202,7 @@ This consists of many small capabilities, including code completions, code forma
 <li><strong>Server layer</strong>: The server exposes the language services and compiler features to users through a JSON protocol. Editors and IDEs can interface with the server to use the language services and to compile code.</li>
 <li><strong>Test Harness layer</strong>: The test harness contains various test runners to execute different types of tests. It also contains test transformers which change the code in test files to help the test runners.</li>
 </ul>
-<p><img src="img/module_structure.svg" alt="Module Structure Model">
+<p><img src="img/module_structure.png" alt="Module Structure Model">
 <br><strong>Figure 4.1</strong> - <em>Module Structure Model of TypeScript, showing the different layers and the dependencies between them.</em></p>
 <p>In this overview, each module represents one or multiple source files which together perform a similar role in the system. Please note that we have grouped together some modules to prevent the image from becoming too detailed. The purple-coloured modules are modules that a user of TypeScript can interact with. All modules that are not purple are internal to TypeScript.</p>
 <p>We can see from the module structure that the different capabilities, as defined above in the Functional View (Section 3), reside in separate layers in the repository. The editor functionality is even split into two layers: one layer that contains the editor services and one separate layer for the server, which wraps the compiler and language service layers.</p>
@@ -273,18 +273,18 @@ From this, we can conclude that testing debt is almost absent in TypeScript.</p>
 These matrices show different metrics for each file over time, therefore allowing us to distinguish patterns in the evolution of TypeScript. In this section, we will highlight a few interesting observations.</p>
 <h4 id="641-red-giants">6.4.1 Red Giants</h4>
 <p>Red giants are components that are very large and maintain this size over many versions. The most obvious component in TypeScript that qualifies is the type-checker, with over 27,000 lines of code and steadily growing over time, as can be seen in the bottom row of Figure 6.5. Another component that acted as a red giant was the emitter, with around 8,000 lines of code, shown in the top row of Figure 6.5. This component is also a case where we can see a successful refactoring (in version 2.1). Here, its size was more than halved, making it more maintainable.</p>
-<p><img src="img/evolution_giants.svg" alt="Evolution of the emitter and type-checker">
+<p><img src="img/evolution_giants.png" alt="Evolution of the emitter and type-checker">
 <br><strong>Figure 6.5</strong> - <em>A subsection of the full evolution matrix, showing the emitter and the type-checker in more detail. The width and height of the rectangles show the number of functions and number of lines per function respectively (as a metric of file size). A black outline is added when a file is changed. We also normalized the sizes of the rectangles to the maximum values encountered for a component, to make the figure more readable.<br></em></p>
 <h4 id="642-system-growth">6.4.2 System Growth</h4>
 <p>During the lifespan of TypeScript, there have been multiple phases in where the number of components grew significantly. A good example is the server module, which doubled in size from version 2.0.3 to 2.0.5 (Figure 6.6a). According to the release notes, this is due to the integration of TypeScript with Visual Studio <a href="#cite-30">[30]</a>.<br>
 Another instance where the evolution of the system is shown clearly is in the early days of the services module. At this moment the module saw significant changes with the removal and addition of most components (Figure 6.6b). These were likely only design changes as they are not mentioned in the release notes.</p>
 <div style="display: inline-block; width: 46%">
-    <img src="img/evolution_growth_server.svg" alt="Growth of the server module">
+    <img src="img/evolution_growth_server.png" alt="Growth of the server module">
     <strong>a)</strong> - <em>Growth phase of the server module</em>
 </div>
 
 <div style="display: inline-block; width: 53%;">
-    <img src="img/evolution_growth_services.svg" alt="Growth of the services module">
+    <img src="img/evolution_growth_services.png" alt="Growth of the services module">
     <strong>b)</strong> - <em>Growth phase of the services module</em>
 </div>
 
