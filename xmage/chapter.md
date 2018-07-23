@@ -1,7 +1,7 @@
 # XMage: Magic Another Game Engine
 By [Christiaan van Orle](https://github.com/chrvanorle), [Siyu Chen](https://github.com/sylviachsy), [Danny Plenge](https://github.com/Dahny) and [Marc Zwart](https://github.com/Arcademode)
 
-![Team XMage](https://github.com/delftswa2018/team-xmage/wiki/images/TeamCards.png "Team XMage")  
+![Team XMage](images/TeamCards.png "Team XMage")  
 
 
 # Abstract
@@ -49,14 +49,14 @@ This section presents an overview of the types of stakeholders found in the XMag
 This diagram is a general overview of all the important stakeholder categories in the project. Per stakeholder category, including the additional stakeholder categories we found ourselves, it shows all the relevant stakeholders. Figure 1 below is a more detailed description of all the stakeholder categories.
 Next, the [Power/Interest grid](#powerinterest-grid) and the [Context view](#context-view) based on the stakeholder analysis will be presented.
 
-![Stakeholders](https://github.com/delftswa2018/team-xmage/wiki/images/Stakeholders.png "Stakeholder Overview")
+![Stakeholders](images/Stakeholders.png "Stakeholder Overview")
 
 **Figure 1:** _Stakeholder Overview_
 
 ## Power vs Interest Grid
 This section introduces a power/interest grid based on the stakeholder types we have found and analyzed, as shown in Figure 2, each stakeholder type is represented by a MTG card [[2]](#bibliography). The power and interest of each type of stakeholder is based on the pull request analysis, issue analysis and the analysis of the forum, Gitter and Reddit.
 
-![Power vs Interest grid](https://github.com/delftswa2018/team-xmage/wiki/images/power_interest.jpg "Power vs Interest grid")
+![Power vs Interest grid](images/power_interest.jpg "Power vs Interest grid")
 
 **Figure 2:** _Power vs. Interest Grid_
 
@@ -64,7 +64,7 @@ This section introduces a power/interest grid based on the stakeholder types we 
 The Context View contains the relationships, dependencies and interactions of the system with the environment, as shown in Figure 3. 
 It shows the communications channels used in order to communicate, the most important stakeholders, the dependencies of the system and the operating systems the system supports. 
 
-![Context View Diagram](https://github.com/delftswa2018/team-xmage/wiki/images/Context%20View.png "Context View Diagram")
+![Context View Diagram](images/Context%20View.png "Context View Diagram")
 
 **Figure 3:** _Context View Diagram_
 
@@ -92,7 +92,7 @@ In this section we will look at the organization of the XMage project from a Mod
 ### Client-Server Architecture
 Here we will discuss the client-server architecture used in the system, as well as what modules are used in which component.
 
-![ClientServer](https://github.com/delftswa2018/team-xmage/wiki/images/ClientServer.png "ClientServer")
+![ClientServer](images/ClientServer.png "ClientServer")
 
 **Figure 4:** _A High Level Overview Architecture in the XMage Project_
 
@@ -101,7 +101,7 @@ In XMage, both client and server are running as separate instances of the game. 
 
 The overview in Figure 5 shows the modules present in the system. Some modules live in both client and server programs, such as the _Mage_ module. The validity assessment program is not present on either server or client, it is not used on production systems at all. The _Mage.Server_ and _Mage.Client_ modules are responsible for running the client and server programs. They load the required resources, such as the cards and game logic (plugins).
 
-![Module organization](https://github.com/delftswa2018/team-xmage/wiki/images/ModuleOrganization.jpg "Module Organization")
+![Module organization](images/ModuleOrganization.jpg "Module Organization")
 
 **Figure 5:** _A Detailed Overview of the Module Organization in the XMage Project_
 
@@ -174,7 +174,7 @@ This section discusses some technical debt analysis from different points of vie
 In the mage project we found a rather clean separation of responsibilities of modules. Especially the separation of state (Mage.Server), logic (_Mage.Framework_) and view logic (_Mage.Client_) is a nice design for the game. Separating the Client/Server communication into a separate module (_Mage.Common_) and defining the Card sets and Cards into a separate module while depending on the Framework containing the abilities/spells etc. also contributes to a solid design.  
 A poorer design choice we have found in the _Mage.Server_ are the dependencies on each plugin. Because of this, the Server cannot compile without these dependencies, analyzing the actual implementation this does not seem like a necessary dependency. Each plugin can dynamically get loaded by the server through a jar file (which can be referenced from a config file) therefore making the dependency redundant.
 
-![Module Diagram](https://github.com/delftswa2018/team-xmage/wiki/images/module-diagram.png)
+![Module Diagram](images/module-diagram.png)
 
 **Figure 9:** _A Dependency Graph of all Mage Modules_
 
@@ -204,7 +204,7 @@ Furthermore, we have noticed a violation of a SOLID principle, namely the Depend
 
 Our suggestion to fix this is to make Token an abstract class and rename it to TokenImpl in order match the naming conventions in the XMage project. Then replacing any concrete usages of Token by a suitable implementation of TokenImpl, while leaving all dependencies on TokenImpl. This would result in the same situation that is present for the CardImpl. Besides resulting in fixing the SOLID violation this will also yield higher consistency in the project.
 
-![Mage Object Hierarchy](https://github.com/delftswa2018/team-xmage/wiki/images/mage-object-hierarchy.png)
+![Mage Object Hierarchy](images/mage-object-hierarchy.png)
 
 **Figure 11:** _A Part of the Mage Class Hierarchy_
 
@@ -236,13 +236,13 @@ The system has evolved a lot over the past 8 years. At the start of the project,
 
 The number of TODOs increase steadily over time. As can be seen in Figure 12, the growth in the number of TODO's coincides with the growth in lines of code.
 
-![TODO vs LOC](https://github.com/delftswa2018/team-xmage/wiki/images/todo-vs-loc.png)
+![TODO vs LOC](images/todo-vs-loc.png)
 
 **Figure 12:** _A Graph Showing TODOs versus Lines of Code over Time_
 
 It may seem like the number of TODOs increase as more code is written, and the TODO/lines-of-code has been decreasing over time. Further analysis shows however, that most of the time, TODOs are actually ignored. As can be seen in Figure 13, there are TODOs that have existed for over 7 years.
 
-![TODO snippet](https://github.com/delftswa2018/team-xmage/wiki/images/todo-age.png)
+![TODO snippet](images/todo-age.png)
 
 **Figure 13:** _A TODO in a piece of code, which was created 7 years ago._
 
@@ -252,7 +252,7 @@ Looking at the TODO message, it appears no one ever looked back at this piece of
 
 As can be seen in Figure 14, the technical debt appears to have an impact on the number of bugs in the system.
 
-![Technical debt vs bugs](https://github.com/delftswa2018/team-xmage/wiki/images/Debt-vs-bugs.png)
+![Technical debt vs bugs](images/Debt-vs-bugs.png)
 
 **Figure 14:** _A Graph Showing the Technical Debt versus the Number of Bugs_
 
@@ -262,7 +262,7 @@ As the technical debt increases, so does the number of bugs find in the system b
 
 This section discusses the hardware, networking and third-party requirements. Even though there are not that many requirements to run XMage, there are still some important requirements to meet. The overview of deployment view in the XMage project is shown in Figure15.
 
-![Deployment View Diagram](https://github.com/delftswa2018/team-xmage/wiki/images/Deployment%20View.png "Deployment view")  
+![Deployment View Diagram](images/Deployment%20View.png "Deployment view")  
 
 **Figure 15:** _The Overview of Deployment View in the XMage Project_
 
@@ -293,7 +293,7 @@ The server has to be accessible by the intended users. For public servers, this 
 ### Network Capacity
 The average upload speed required is about 10 Mbit/s for 250 users, while the download speed is about 10% of the required upload speed, as can be seen in Figure 16.
 
-![Server Traffic Diagram](https://github.com/delftswa2018/team-xmage/wiki/images/ServerTraffic.jpg "Server traffic")  
+![Server Traffic Diagram](images/ServerTraffic.jpg "Server traffic")  
 
 **Figure 16:** _The Bandwidth of Network in the XMage Project_
 
@@ -314,7 +314,7 @@ In this section explains how the users interact with the system and which user i
 We identify two main types of users in the XMage program, the players and the server administrators. The players use the game through the game's Graphical User Interface (GUI), its interaction we will describe in a followup section. From this we can already see that there are no strong technical capabilities required of the players, since their entire interaction with the game happens through a GUI. It is however expected that they know the MTG game, as there is no explanation regarding the rules of the card game embedded in the computer game.
 The server administrator have to do some more low level interactions [[12]](#bibliography) like manually editing xml config files, setting up cron jobs [[11]](#bibliography) and creating script files. They can manage which games are going on on the server and which players are present via a special console. It may be clear that there are more significant technical capabilities required of the server administrators.
 
-![Mage UI](https://github.com/delftswa2018/team-xmage/wiki/images/XMage_UI_1.jpg "Mage UI")  
+![Mage UI](images/XMage_UI_1.jpg "Mage UI")  
 
 **Figure 17** _The main menu of XMage, with the image download menu opened._
 
