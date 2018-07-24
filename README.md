@@ -120,7 +120,7 @@ Reuse of the material is permitted, provided adequate attribution (such as a lin
 
 [![Creative Commons](images/cc-by.png)][cc-by]
 
-Cover image credits:
+Cover based on design by Valentine Mairet for [DESOSA 2016]. Image credits:
 
 - Delft Nieuwe Kerk: Jan Arkesteijn at [Wikimedia](https://commons.wikimedia.org/wiki/File:Nieuwe_kerk_20040311.jpg)
 - Cat: Smiling Cat Face With Open Mouth on [Apple iOS 9.3](http://emojipedia.org/apple/ios-9.3) at [Emojipedia](http://emojipedia.org/apple/ios-9.3/smiling-cat-face-with-open-mouth)
