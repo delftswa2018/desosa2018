@@ -118,13 +118,15 @@ We would like to thank:
 The copyright of the chapters is with the authors of the chapters. All chapters are licensed under the [Creative Commons Attribution 4.0 International License][cc-by].
 Reuse of the material is permitted, provided adequate attribution (such as a link to the corresponding chapter on the [DESOSA book site][desosa]) is included.
 
-Cover image credits:
-TU Delft library, TheSpeedX at [Wikimedia](https://commons.wikimedia.org/wiki/File:Library_TUDelft.jpg);
-Owl on [Emojipedia Sample Image Collection](http://emojipedia.org/emojipedia/sample-images) at [Emojipedia](http://emojipedia.org/emojipedia/sample-images/owl);
-Feathers by [Franco Averta](http://www.flaticon.com/authors/franco-averta) at [Flaticon](http://flaticon.com).
-
-
 [![Creative Commons](images/cc-by.png)][cc-by]
+
+Cover based on design by Valentine Mairet for [DESOSA 2016]. Image credits:
+
+- Delft Nieuwe Kerk: Jan Arkesteijn at [Wikimedia](https://commons.wikimedia.org/wiki/File:Nieuwe_kerk_20040311.jpg)
+- Cat: Smiling Cat Face With Open Mouth on [Apple iOS 9.3](http://emojipedia.org/apple/ios-9.3) at [Emojipedia](http://emojipedia.org/apple/ios-9.3/smiling-cat-face-with-open-mouth)
+- Cat Paw: Designed by [Freepik](http://www.flaticon.com/authors/freepik) at [Flaticon](http://flaticon.com)
+
+
 
 [cc-by]: http://creativecommons.org/licenses/by/4.0/
 [desosa]: https://www.gitbook.com/book/delftswa/desosa2018/details
