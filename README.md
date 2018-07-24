@@ -50,14 +50,14 @@ The students assessed the current debt in the systems and provided proposals on 
 
 [debt]: https://speakerdeck.com/avandeursen/lehman-versus-lehman-dealing-with-debt?slide=2
 
-Besides these common themes, students were encouraged to take additional [viewpoints] and [perspectives], addressing, e.g., security, privacy, regulatory, evolution, or product configuration aspects of the system they studied.
+Besides these common themes, students were encouraged to include an analysis of additional [viewpoints] and [perspectives], addressing, e.g., security, privacy, regulatory, evolution, or product configuration aspects of the system they studied.
 
 ## First-Hand Experience
 
 Last but not least, all students made a substantial effort to try to contribute to the actual projects.
 With these contributions the students had the ability to interact with the community; they often discussed with other developers and architects of the systems. This provided them insights in the architectural trade-offs made in these systems.
 
-The students have written a collaborative chapter on some of the contributions made during the course. It can be found in the dedicated [contributions chapter][contrib-chapter].
+Student contributions included documentation changes, bug fixes, refactorings, as well as small new features. A list of contributions accepted by the projects under study is provided in the dedicated [contributions chapter][contrib-chapter].
 
 [contrib-chapter]: contributions/chapter.md
 
